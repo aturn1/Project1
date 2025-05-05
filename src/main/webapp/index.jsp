@@ -12,14 +12,14 @@
       margin: 0;
       outline: none;
       font-family: Roboto, Arial, sans-serif;
-      font-size: 40px;
-      color: #012;
+      font-size: 60px;
+      color: #019;
       line-height: 29px;
       }
       h1 {
       position: absolute;
       margin: 0;
-      font-size: 50px;
+      font-size: 70px;
       color: #000;
       z-index: 2;
       }
@@ -52,7 +52,7 @@
       }
       .banner::after {
       content: "";
-      background-color: hotpink;
+      background-color: green;
       position: absolute;
       width: 100%;
       height: 100%;
