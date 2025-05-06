@@ -4,7 +4,7 @@ pipeline {
     {
         maven 'maven3'
     }
-    stages {
+    stages {asdfasd
         stage('Checkout_Source_Code') {
             steps {
                 git branch: 'main', url: 'https://github.com/nocturnaldevops/Project1.git'
