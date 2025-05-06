@@ -37,7 +37,7 @@
       width: 100%;
       padding: 20px;
       border-radius: 6px;
-      background: #FFF;
+      background: #FFA;
       box-shadow: 0 0 25px 0 #000;
       }
      .banner {
@@ -52,7 +52,7 @@
       }
       .banner::after {
       content: "";
-      background-color: olive;
+      background-color: #FAEBE7;
       position: absolute;
       width: 100%;
       height: 100%;
