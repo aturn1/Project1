@@ -36,13 +36,13 @@
       form {
       width: 100%;
       padding: 20px;
-      border-radius: 6px;
-      background: #FFA;
+      border-radius: 10px;
+      background: #FFF;
       box-shadow: 0 0 25px 0 #000;
       }
      .banner {
       position: relative;
-      height: 200px;
+      height: 400px;
       background-image: url("/uploads/media/default/0001/02/fb57ab781c34da322c884532bfec751e843e36fc.jpeg");
       background-size: cover;
       display: flex;
@@ -59,7 +59,7 @@
       }
       input, select, textarea {
       margin-bottom: 10px;
-      border: 1px solid #ccc;
+      border: 1px solid #AAA;
       border-radius: 3px;
       }
       input {
