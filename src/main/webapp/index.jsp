@@ -37,12 +37,12 @@
       width: 100%;
       padding: 20px;
       border-radius: 10px;
-      background: #FFF;
+      background: #009;
       box-shadow: 0 0 25px 0 #000;
       }
      .banner {
       position: relative;
-      height: 40px;
+      height: 200px;
       background-image: url("/uploads/media/default/0001/02/fb57ab781c34da322c884532bfec751e843e36fc.jpeg");
       background-size: cover;
       display: flex;
@@ -52,7 +52,7 @@
       }
       .banner::after {
       content: "";
-      background-color: #FAEBE7;
+      background-color: #COCOCO;
       position: absolute;
       width: 100%;
       height: 100%;
