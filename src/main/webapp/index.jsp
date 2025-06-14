@@ -3,277 +3,344 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DevOps Job Application Form</title>
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <title>DevOps Careers | Instagram Theme</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        html, body {
-            min-height: 100%;
+        :root {
+            --ig-primary: #405DE6;
+            --ig-secondary: #5851DB;
+            --ig-purple: #833AB4;
+            --ig-pink: #C13584;
+            --ig-red: #E1306C;
+            --ig-orange: #FD1D1D;
+            --ig-yellow: #F56040;
+            --ig-gradient: linear-gradient(45deg, var(--ig-primary), var(--ig-purple), var(--ig-pink), var(--ig-red), var(--ig-orange), var(--ig-yellow));
+        }
+
+        * {
             margin: 0;
             padding: 0;
-            font-family: Roboto, Arial, sans-serif;
-        }
-
-        body {
-            background-color: #f5f5f5;
-        }
-
-        h1 {
-            margin: 0;
-            font-size: 32px;
-            color: #fff;
-            z-index: 2;
-            text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
-        }
-
-        .top-info {
-            margin: 20px 0;
-            font-size: 16px;
-            line-height: 1.5;
-            color: #333;
-        }
-
-        .testbox {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            padding: 20px;
-        }
-
-        form {
-            width: 100%;
-            max-width: 800px;
-            padding: 20px;
-            border-radius: 10px;
-            background: #fff;
-            box-shadow: 0 0 25px rgba(0,0,0,0.1);
-        }
-
-        .banner {
-            position: relative;
-            height: 200px;
-            background-image: url("/uploads/media/default/0001/02/fb57ab781c34da322c884532bfec751e843e36fc.jpeg");
-            background-size: cover;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            border-radius: 5px 5px 0 0;
-            margin-bottom: 20px;
-        }
-
-        .banner::after {
-            content: "";
-            background-color: rgba(0,0,0,0.5);
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            top: 0;
-            left: 0;
-            border-radius: 5px 5px 0 0;
-        }
-
-        .item {
-            margin: 15px 0;
-        }
-
-        .item p {
-            margin-bottom: 8px;
-            font-size: 16px;
-            color: #333;
-        }
-
-        .required {
-            color: #e74c3c;
-        }
-
-        input, select, textarea {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 10px;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-            font-size: 16px;
             box-sizing: border-box;
         }
 
-        input[type="file"] {
-            padding: 5px;
-        }
-
-        input:focus, select:focus, textarea:focus {
-            border-color: #3498db;
-            box-shadow: 0 0 5px rgba(52,152,219,0.5);
-        }
-
-        .name-item, .contact-item, .position-item {
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #121212;
+            color: #f5f5f5;
+            min-height: 100vh;
             display: flex;
-            flex-wrap: wrap;
-            gap: 15px;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
         }
 
-        .name-item input, .contact-item .item, .position-item .item {
+        .ig-container {
+            width: 100%;
+            max-width: 500px;
+            background: #1e1e1e;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .ig-header {
+            background: linear-gradient(45deg, #121212, #1e1e1e);
+            padding: 24px;
+            text-align: center;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            position: relative;
+        }
+
+        .ig-header h1 {
+            font-size: 24px;
+            font-weight: 600;
+            background: linear-gradient(45deg, var(--ig-primary), var(--ig-pink), var(--ig-orange));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-bottom: 8px;
+        }
+
+        .ig-header p {
+            font-size: 14px;
+            color: #a8a8a8;
+            line-height: 1.5;
+        }
+
+        .ig-form {
+            padding: 24px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 14px;
+            color: #e0e0e0;
+            font-weight: 500;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 12px 16px;
+            background: #2a2a2a;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            color: #f5f5f5;
+            font-size: 14px;
+            transition: all 0.3s ease;
+        }
+
+        .form-control:focus {
+            border-color: var(--ig-primary);
+            outline: none;
+            box-shadow: 0 0 0 2px rgba(64, 93, 230, 0.2);
+        }
+
+        .name-fields {
+            display: flex;
+            gap: 12px;
+        }
+
+        .name-fields .form-control {
             flex: 1;
-            min-width: 200px;
         }
 
-        .question {
-            margin: 20px 0;
-        }
-
-        .question p {
-            font-size: 16px;
-            color: #333;
-            margin-bottom: 10px;
-        }
-
-        .question-answer {
+        .radio-group {
             display: flex;
             flex-wrap: wrap;
-            gap: 15px;
+            gap: 12px;
         }
 
-        .radio-label {
+        .radio-option {
             display: flex;
             align-items: center;
-            cursor: pointer;
-            margin-right: 20px;
         }
 
-        .radio-input {
+        .radio-option input {
+            appearance: none;
+            width: 18px;
+            height: 18px;
+            border: 2px solid #404040;
+            border-radius: 50%;
             margin-right: 8px;
-        }
-
-        .btn-block {
-            margin-top: 30px;
-            text-align: center;
-        }
-
-        button {
-            padding: 12px 30px;
-            border: none;
-            border-radius: 4px;
-            background: #2c3e50;
-            font-size: 16px;
-            font-weight: 500;
-            color: #fff;
+            position: relative;
             cursor: pointer;
-            transition: background 0.3s;
+            transition: all 0.2s ease;
         }
 
-        button:hover {
-            background: #1abc9c;
+        .radio-option input:checked {
+            border-color: var(--ig-primary);
         }
 
-        @media (max-width: 600px) {
-            .name-item, .contact-item, .position-item {
-                flex-direction: column;
-                gap: 0;
+        .radio-option input:checked::after {
+            content: '';
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background: var(--ig-primary);
+            border-radius: 50%;
+            top: 2px;
+            left: 2px;
+        }
+
+        .radio-option label {
+            font-size: 14px;
+            color: #e0e0e0;
+            cursor: pointer;
+        }
+
+        .file-upload {
+            position: relative;
+            overflow: hidden;
+            display: inline-block;
+            width: 100%;
+        }
+
+        .file-upload-btn {
+            width: 100%;
+            padding: 12px 16px;
+            background: #2a2a2a;
+            border: 1px dashed rgba(255, 255, 255, 0.2);
+            border-radius: 8px;
+            color: #a8a8a8;
+            font-size: 14px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .file-upload-btn:hover {
+            border-color: var(--ig-primary);
+            color: #f5f5f5;
+        }
+
+        .file-upload input[type="file"] {
+            position: absolute;
+            left: 0;
+            top: 0;
+            opacity: 0;
+            width: 100%;
+            height: 100%;
+            cursor: pointer;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 14px;
+            background: var(--ig-gradient);
+            border: none;
+            border-radius: 8px;
+            color: white;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 10px;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(64, 93, 230, 0.3);
+        }
+
+        .ig-footer {
+            text-align: center;
+            padding: 16px;
+            font-size: 12px;
+            color: #6e6e6e;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .ig-brand {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            margin-top: 8px;
+        }
+
+        .ig-brand span {
+            font-weight: 600;
+            background: var(--ig-gradient);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        @media (max-width: 480px) {
+            .ig-container {
+                border-radius: 0;
             }
             
-            .name-item input, .contact-item .item, .position-item .item {
-                width: 100%;
+            .name-fields {
+                flex-direction: column;
+                gap: 12px;
             }
         }
     </style>
 </head>
 <body>
-    <div class="testbox">
-        <form action="#" method="post" enctype="multipart/form-data">
-            <div class="banner">
-                <h1>DevOps Job Application Form</h1>
-            </div>
-            
-            <div class="item">
-                <p class="top-info"><strong>Thank you for your interest in working with us. <br> Please check below for available job opportunities that meet your criteria and send your application by filling out the Job Application Form.</strong></p>
-                <p>We will get back to you shortly.</p>
-            </div>
+    <div class="ig-container">
+        <div class="ig-header">
+            <h1>DevOps Career Opportunities</h1>
+            <p>Join our team of cloud infrastructure experts. We'll review your application and get back to you soon.</p>
+        </div>
 
-            <div class="item">
-                <p>Name<span class="required">*</span></p>
-                <div class="name-item">
-                    <input type="text" name="first_name" placeholder="First" required>
-                    <input type="text" name="last_name" placeholder="Last" required>
+        <form class="ig-form" action="#" method="post" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="name">Full Name <span style="color: #E1306C">*</span></label>
+                <div class="name-fields">
+                    <input type="text" class="form-control" id="first_name" name="first_name" placeholder="First" required>
+                    <input type="text" class="form-control" id="last_name" name="last_name" placeholder="Last" required>
                 </div>
             </div>
 
-            <div class="contact-item">
-                <div class="item">
-                    <p>Email<span class="required">*</span></p>
-                    <input type="email" name="email" required>
-                </div>
-                <div class="item">
-                    <p>Phone<span class="required">*</span></p>
-                    <input type="tel" name="phone" required>
+            <div class="form-group">
+                <label for="email">Email <span style="color: #E1306C">*</span></label>
+                <input type="email" class="form-control" id="email" name="email" placeholder="your@email.com" required>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Phone <span style="color: #E1306C">*</span></label>
+                <input type="tel" class="form-control" id="phone" name="phone" placeholder="+1 (___) ___-____" required>
+            </div>
+
+            <div class="form-group">
+                <label for="position">Position <span style="color: #E1306C">*</span></label>
+                <select class="form-control" id="position" name="position" required>
+                    <option value="">Select a position</option>
+                    <option value="Senior DevOps Engineer">Senior DevOps Engineer</option>
+                    <option value="Cloud Architect">Cloud Architect</option>
+                    <option value="Site Reliability Engineer">Site Reliability Engineer</option>
+                    <option value="Platform Engineer">Platform Engineer</option>
+                    <option value="DevOps Intern">DevOps Intern</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Current Employment Status <span style="color: #E1306C">*</span></label>
+                <div class="radio-group">
+                    <div class="radio-option">
+                        <input type="radio" id="employed" name="employment_status" value="Employed" required>
+                        <label for="employed">Employed</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" id="self-employed" name="employment_status" value="Self-Employed">
+                        <label for="self-employed">Self-Employed</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" id="unemployed" name="employment_status" value="Unemployed">
+                        <label for="unemployed">Unemployed</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" id="student" name="employment_status" value="Student">
+                        <label for="student">Student</label>
+                    </div>
                 </div>
             </div>
 
-            <div class="position-item">
-                <div class="item">
-                    <p>What position are you applying for?<span class="required">*</span></p>
-                    <select name="position" required>
-                        <option value="">Select a position</option>
-                        <option value="DevOps Engineer">DevOps Engineer</option>
-                        <option value="Site Reliability Engineer">Site Reliability Engineer</option>
-                        <option value="Cloud Engineer">Cloud Engineer</option>
-                        <option value="Automation Engineer">Automation Engineer</option>
-                        <option value="Infrastructure Engineer">Infrastructure Engineer</option>
-                    </select>
-                </div>
-                <div class="item">
-                    <p>Available start date<span class="required">*</span></p>
-                    <input type="date" name="start_date" required>
+            <div class="form-group">
+                <label for="resume">Resume/CV <span style="color: #E1306C">*</span></label>
+                <div class="file-upload">
+                    <button type="button" class="file-upload-btn">
+                        <i class="fas fa-cloud-upload-alt"></i> Choose file
+                    </button>
+                    <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx" required>
                 </div>
             </div>
 
-            <div class="question">
-                <p>What is your current employment status?<span class="required">*</span></p>
-                <div class="question-answer">
-                    <label class="radio-label">
-                        <input type="radio" class="radio-input" name="employment_status" value="Employed" required>
-                        <span>Employed</span>
-                    </label>
-                    <label class="radio-label">
-                        <input type="radio" class="radio-input" name="employment_status" value="Self-Employed">
-                        <span>Self-Employed</span>
-                    </label>
-                    <label class="radio-label">
-                        <input type="radio" class="radio-input" name="employment_status" value="Unemployed">
-                        <span>Unemployed</span>
-                    </label>
-                    <label class="radio-label">
-                        <input type="radio" class="radio-input" name="employment_status" value="Student">
-                        <span>Student</span>
-                    </label>
-                </div>
+            <div class="form-group">
+                <label>Available to start in</label>
+                <input type="date" class="form-control" name="start_date">
             </div>
 
-            <div class="item">
-                <p>Submit your resume:</p>
-                <input type="url" name="resume_url" placeholder="Resume URL (optional)">
-                <p>Or upload file:</p>
-                <input type="file" name="resume_file" accept=".pdf,.doc,.docx">
-            </div>
-
-            <div class="question">
-                <p>Would you like to list references?</p>
-                <div class="question-answer">
-                    <label class="radio-label">
-                        <input type="radio" class="radio-input" name="references" value="Yes">
-                        <span>Yes</span>
-                    </label>
-                    <label class="radio-label">
-                        <input type="radio" class="radio-input" name="references" value="No">
-                        <span>No</span>
-                    </label>
-                </div>
-            </div>
-
-            <div class="btn-block">
-                <button type="submit">Apply For The Job</button>
-            </div>
+            <button type="submit" class="submit-btn">
+                <i class="fas fa-paper-plane"></i> Submit Application
+            </button>
         </form>
+
+        <div class="ig-footer">
+            <p>Follow our engineering journey</p>
+            <div class="ig-brand">
+                <i class="fab fa-instagram"></i>
+                <span>@DevOpsCareers</span>
+            </div>
+        </div>
     </div>
+
+    <script>
+        // Update file upload button text when file is selected
+        document.querySelector('input[type="file"]').addEventListener('change', function(e) {
+            const fileName = e.target.files[0] ? e.target.files[0].name : 'No file chosen';
+            document.querySelector('.file-upload-btn').innerHTML = 
+                `<i class="fas fa-file-alt"></i> ${fileName}`;
+        });
+    </script>
 </body>
 </html>
