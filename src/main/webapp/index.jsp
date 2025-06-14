@@ -1,284 +1,279 @@
-<html>
-    <title>DevOps Job Application form</title>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevOps Job Application Form</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
     <style>
-      html, body {
-      min-height: 100%;
-      }
-     <!-- commemt -->
-      body, div, form, input, select, p {
-      padding: 0;
-      margin: 0;
-      outline: none;
-      font-family: Roboto, Arial, sans-serif;
-      font-size: 90px;
-      color: #019;
-      line-height: 29px;
-      }
-      h1 {
-      position: absolute;
-      margin: 0;
-      font-size: 50px;
-      color: #000;
-      z-index: 2;
-      }
-      p.top-info {
-      margin: 10px 0;
-      }
-      .testbox {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: inherit;
-      padding: 20px;
-      }
-      form {
-      width: 100%;
-      padding: 20px;
-      border-radius: 10px;
-      background: #fff;
-      box-shadow: 0 0 25px 0 #000;
-      }
-     .banner {
-      position: relative;
-      height: 200px;
-      background-image: url("/uploads/media/default/0001/02/fb57ab781c34da322c884532bfec751e843e36fc.jpeg");
-      background-size: cover;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      }
-      .banner::after {
-      content: "";
-      background-color: #COCOCO;
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      }
-      input, select, textarea {
-      margin-bottom: 10px;
-      border: 1px solid #AAA;
-      border-radius: 3px;
-      }
-      input {
-      width: calc(100% - 10px);
-      padding: 5px;
-      }
-      input[type="date"] {
-      padding: 4px 5px;
-      }
-      select {
-      width: 100%;
-      padding: 7px 0;
-      background: transparent;
-      }
-      .item:hover p, .item:hover i, .question:hover p, .question label:hover, input:hover::placeholder {
-      color: #1c87c9;
-      }
-      .item input:hover, .item select:hover {
-      border: 1px solid transparent;
-      box-shadow: 0 0 6px 0 #1c87c9;
-      color: #1c87c9;
-      }
-      .item {
-      position: relative;
-      margin: 10px 0;
-      }
-      input[type="date"]::-webkit-inner-spin-button {
-      display: none;
-      }
-      .item i, input[type="date"]::-webkit-calendar-picker-indicator {
-      position: absolute;
-      font-size: 40px;
-      color: #a9a9a9;
-      }
-      .item i {
-      right: 2%;
-      top: 30px;
-      z-index: 1;
-      }
-      [type="date"]::-webkit-calendar-picker-indicator {
-      right: 1%;
-      z-index: 2;
-      opacity: 0;
-      cursor: pointer;
-      }
-      input[type=radio]  {
-      display: none;
-      }
-      label.radio {
-      position: relative;
-      display: inline-block;
-      margin: 5px 20px 10px 0;
-      cursor: pointer;
-      }
-      .question span {
-      margin-left: 30px;
-      }
-      span.required {
-      margin-left: 0;
-      color: #FAEBE7;
-      }
-      label.radio:before {
-      content: "";
-      position: absolute;
-      left: 0;
-      width: 17px;
-      height: 17px;
-      border-radius: 50%;
-      border: 2px solid #ccc;
-      }
-      input[type=radio]:checked + label:before, label.radio:hover:before {
-      border: 2px solid #1c87c9;
-      }
-      label.radio:after {
-      content: "";
-      position: absolute;
-      top: 6px;
-      left: 5px;
-      width: 8px;
-      height: 4px;
-      border: 3px solid #1c87c9;
-      border-top: none;
-      border-right: none;
-      transform: rotate(-45deg);
-      opacity: 0;
-      }
-      input[type=radio]:checked + label:after {
-      opacity: 1;
-      }
-      .btn-block {
-      margin-top: 10px;
-      text-align: center;
-      }
-      button {
-      width: auto;
-      padding: 10px;
-      border: none;
-      border-radius: 5px;
-      background: #000;
-      font-size: 20px;
-      font-weight: 900;
-      color: #FAEBE7;
-      cursor: pointer;
-      }
-      button:hover {
-      background: #1e6fa0;
-      }
-      @media (min-width: 568px) {
-      .name-item, .contact-item, .position-item {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      }
-      .name-item input {
-      width: calc(50% - 20px);
-      }
-      .contact-item .item, .position-item .item {
-      width: calc(50% - 8px);
-      }
-      .contact-item input, .position-item input {
-      width: calc(100% - 12px);
-      }
-      .position-item select {
-      width: 100%;
-      }
-      }
-    </style>
-  </head>
-  <body>
-    <div class="testbox">
-      <form action="/">
-        <div class="banner">
-          <h1>DevOps Job Application Form</h1>
-        </div>
-        <div align="left">
- 
-        <p class="top-info"><b>Thank you for your interest in working with us. <br/> Please check below for available job opportunities that meet your criteria and send your application by filling out the Job Application Form.</b></p>
-        </div>
-        
-<div align="left">
+        html, body {
+            min-height: 100%;
+            margin: 0;
+            padding: 0;
+            font-family: Roboto, Arial, sans-serif;
+        }
 
-  <p> We will get back to you shortly</p></div>
-        <div class="item">
-          <p>Name<span class="required">*</span></p>
-          <div class="name-item">
-            <input type="text" name="name" placeholder="First" required/>
-            <input type="text" name="name" placeholder="Last" required/>
-          </div>
-        </div>
-        <div class="contact-item">
-          <div class="item">
-            <p>Email<span class="required">*</span></p>
-            <input type="text" name="name" required/>
-          </div>
-          <div class="item">
-            <p>Phone<span class="required">*</span></p>
-            <input type="text" name="name" required/>
-          </div>
-        </div>
-        <div class="position-item">
-          <div class="item">
-            <p>What position are you applying for?<span class="required">*</span></p>
-            <select required>
-              <option value="1">Job 1</option>
-              <option value="2">Job 2</option>
-              <option value="3">Job 3</option>
-              <option value="4">Job 4</option>
-              <option value="5">Job 5</option>
-            </select>
-          </div>
-          <div class="item">
-            <p>Available start date<span class="required">*</span></p>
-            <input type="date" name="bdate" required/>
-            <i class="fas fa-calendar-alt"></i>
-          </div>
-        </div>
-        <div class="question">
-          <p>What is your current employment status?<span class="required">*</span></p>
-          <div class="question-answer">
-            <div>
-              <input type="radio" value="none" id="radio_1" name="status" required/>
-              <label for="radio_1" class="radio"><span>Employed</span></label>
+        body {
+            background-color: #f5f5f5;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 32px;
+            color: #fff;
+            z-index: 2;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+        }
+
+        .top-info {
+            margin: 20px 0;
+            font-size: 16px;
+            line-height: 1.5;
+            color: #333;
+        }
+
+        .testbox {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        form {
+            width: 100%;
+            max-width: 800px;
+            padding: 20px;
+            border-radius: 10px;
+            background: #fff;
+            box-shadow: 0 0 25px rgba(0,0,0,0.1);
+        }
+
+        .banner {
+            position: relative;
+            height: 200px;
+            background-image: url("/uploads/media/default/0001/02/fb57ab781c34da322c884532bfec751e843e36fc.jpeg");
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            border-radius: 5px 5px 0 0;
+            margin-bottom: 20px;
+        }
+
+        .banner::after {
+            content: "";
+            background-color: rgba(0,0,0,0.5);
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            border-radius: 5px 5px 0 0;
+        }
+
+        .item {
+            margin: 15px 0;
+        }
+
+        .item p {
+            margin-bottom: 8px;
+            font-size: 16px;
+            color: #333;
+        }
+
+        .required {
+            color: #e74c3c;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+
+        input[type="file"] {
+            padding: 5px;
+        }
+
+        input:focus, select:focus, textarea:focus {
+            border-color: #3498db;
+            box-shadow: 0 0 5px rgba(52,152,219,0.5);
+        }
+
+        .name-item, .contact-item, .position-item {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .name-item input, .contact-item .item, .position-item .item {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .question {
+            margin: 20px 0;
+        }
+
+        .question p {
+            font-size: 16px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .question-answer {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .radio-label {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            margin-right: 20px;
+        }
+
+        .radio-input {
+            margin-right: 8px;
+        }
+
+        .btn-block {
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        button {
+            padding: 12px 30px;
+            border: none;
+            border-radius: 4px;
+            background: #2c3e50;
+            font-size: 16px;
+            font-weight: 500;
+            color: #fff;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        button:hover {
+            background: #1abc9c;
+        }
+
+        @media (max-width: 600px) {
+            .name-item, .contact-item, .position-item {
+                flex-direction: column;
+                gap: 0;
+            }
+            
+            .name-item input, .contact-item .item, .position-item .item {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="testbox">
+        <form action="#" method="post" enctype="multipart/form-data">
+            <div class="banner">
+                <h1>DevOps Job Application Form</h1>
             </div>
-            <div>
-              <input type="radio" value="none" id="radio_2" name="status" required/>
-              <label for="radio_2" class="radio"><span>Self-Employed</span></label>
+            
+            <div class="item">
+                <p class="top-info"><strong>Thank you for your interest in working with us. <br> Please check below for available job opportunities that meet your criteria and send your application by filling out the Job Application Form.</strong></p>
+                <p>We will get back to you shortly.</p>
             </div>
-            <div>
-              <input type="radio" value="none" id="radio_3" name="status" required/>
-              <label for="radio_3" class="radio"><span>Unemployed</span></label>
+
+            <div class="item">
+                <p>Name<span class="required">*</span></p>
+                <div class="name-item">
+                    <input type="text" name="first_name" placeholder="First" required>
+                    <input type="text" name="last_name" placeholder="Last" required>
+                </div>
             </div>
-            <div>
-              <input type="radio" value="none" id="radio_4" name="status" required/>
-              <label for="radio_4" class="radio"><span>Student</span></label>
+
+            <div class="contact-item">
+                <div class="item">
+                    <p>Email<span class="required">*</span></p>
+                    <input type="email" name="email" required>
+                </div>
+                <div class="item">
+                    <p>Phone<span class="required">*</span></p>
+                    <input type="tel" name="phone" required>
+                </div>
             </div>
-          </div>
-        </div>
-        <div class="item">
-          <p>Submit your resume by providing your resume URL or attach file:</p>
-          <input type="text" name="providing"/>
-  <input type="file" name="file" accept="file/*">
-        </div>
-        <div class="question">
-          <p>Would you like to list references</p>
-          <div class="question-answer">
-            <div>
-              <input type="radio" value="none" id="radio_5" name="references" />
-              <label for="radio_5" class="radio"><span>Yes</span></label>
+
+            <div class="position-item">
+                <div class="item">
+                    <p>What position are you applying for?<span class="required">*</span></p>
+                    <select name="position" required>
+                        <option value="">Select a position</option>
+                        <option value="DevOps Engineer">DevOps Engineer</option>
+                        <option value="Site Reliability Engineer">Site Reliability Engineer</option>
+                        <option value="Cloud Engineer">Cloud Engineer</option>
+                        <option value="Automation Engineer">Automation Engineer</option>
+                        <option value="Infrastructure Engineer">Infrastructure Engineer</option>
+                    </select>
+                </div>
+                <div class="item">
+                    <p>Available start date<span class="required">*</span></p>
+                    <input type="date" name="start_date" required>
+                </div>
             </div>
-            <div>
-              <input type="radio" value="none" id="radio_6" name="references" />
-              <label for="radio_6" class="radio"><span>No</span></label>
+
+            <div class="question">
+                <p>What is your current employment status?<span class="required">*</span></p>
+                <div class="question-answer">
+                    <label class="radio-label">
+                        <input type="radio" class="radio-input" name="employment_status" value="Employed" required>
+                        <span>Employed</span>
+                    </label>
+                    <label class="radio-label">
+                        <input type="radio" class="radio-input" name="employment_status" value="Self-Employed">
+                        <span>Self-Employed</span>
+                    </label>
+                    <label class="radio-label">
+                        <input type="radio" class="radio-input" name="employment_status" value="Unemployed">
+                        <span>Unemployed</span>
+                    </label>
+                    <label class="radio-label">
+                        <input type="radio" class="radio-input" name="employment_status" value="Student">
+                        <span>Student</span>
+                    </label>
+                </div>
             </div>
-          </div>
-        </div>
-        <div class="btn-block">
-          <button type="submit" href="/">Apply For The Job</button>
-        </div>
-      </form>
+
+            <div class="item">
+                <p>Submit your resume:</p>
+                <input type="url" name="resume_url" placeholder="Resume URL (optional)">
+                <p>Or upload file:</p>
+                <input type="file" name="resume_file" accept=".pdf,.doc,.docx">
+            </div>
+
+            <div class="question">
+                <p>Would you like to list references?</p>
+                <div class="question-answer">
+                    <label class="radio-label">
+                        <input type="radio" class="radio-input" name="references" value="Yes">
+                        <span>Yes</span>
+                    </label>
+                    <label class="radio-label">
+                        <input type="radio" class="radio-input" name="references" value="No">
+                        <span>No</span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="btn-block">
+                <button type="submit">Apply For The Job</button>
+            </div>
+        </form>
     </div>
-  </body>
+</body>
 </html>
