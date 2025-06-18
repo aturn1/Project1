@@ -38,7 +38,16 @@ Prashanth''', cc: '', from: '', replyTo: '', subject: 'Project Bentley waiting f
                 stage("deploytoProd"){
             steps
             {
-                           deploy adapters: [tomcat9(alternativeDeploymentContext: '', credentialsId: 'tomcat-prod', path: '', url: 'http://172.31.85.109:8080')], contextPath: 'bentley', war: '**/*.war'
+                
+                mail bcc: '', body: '''Hello Sabitha, 
+Please go through the project Project ID 1234 and Project Name Bentley CICD
+and kindly approve
+
+Regards
+Prashanth''', cc: '', from: '', replyTo: '', subject: 'Project Bentley waiting for approval', to: 'projects2488@gmail.com'
+                slackSend botUser: true, channel: 'rcsprint1', color: '#439fe0', message: '@sabitha - the project bentley cicd1 is built successfully and waiting for your approval', teamDomain: 'royalchallengers', tokenCredentialId: 'slacktoken'
+                input message: 'Waiting for approval from Sabitha', submitter: 'sabitha'         
+                deploy adapters: [tomcat9(alternativeDeploymentContext: '', credentialsId: 'tomcat-prod', path: '', url: 'http://172.31.85.109:8080')], contextPath: 'bentley', war: '**/*.war'
             }
         }
     }
