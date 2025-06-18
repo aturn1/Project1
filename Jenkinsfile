@@ -30,5 +30,16 @@ Prashanth''', cc: '', from: '', replyTo: '', subject: 'Project Bentley waiting f
                 deploy adapters: [tomcat9(alternativeDeploymentContext: '', credentialsId: 'tomcatcreds-test', path: '', url: 'http://172.31.82.1:8080')], contextPath: 'testbentley', war: '**/*.war'
             }
         }
+        stage("test"){
+            steps{
+                sh 'echo "testing passed"'
+    }
+}
+                stage("deploytoProd"){
+            steps
+            {
+                           deploy adapters: [tomcat9(alternativeDeploymentContext: '', credentialsId: 'tomcat-prod', path: '', url: 'http://172.31.85.109:8080')], contextPath: 'bentley', war: '**/*.war'
+            }
+        }
     }
 }
