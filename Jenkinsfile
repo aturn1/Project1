@@ -15,7 +15,7 @@ pipeline {
                 label 'slave1'
             }
             steps {
-                sh 'mvn package'
+                sh 'mvn pakage'
             }
         }
         stage("deploy"){
