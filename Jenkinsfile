@@ -4,6 +4,7 @@ pipeline {
         // Reference your SonarQube server configuration from Jenkins
         SCANNER_HOME = tool 'sonarscanner' // Name of your SonarScanner tool in Jenkins
         SONAR_TOKEN = credentials('sonartoken') // Name of your SonarQube token credential
+             SONAR_ORGANIZATION = 'sonar2025june'
     }
     tools{
         maven 'maven363'
@@ -31,6 +32,7 @@ stage('SonarQube Analysis') {
                 withSonarQubeEnv('sonarcloud') { // Name of your SonarQube server configuration in Jenkins
                     sh """
                         ${SCANNER_HOME}/bin/sonar-scanner \
+                         -Dsonar.organization=${SONAR_ORGANIZATION} \
                         -Dsonar.projectKey=sonar2025june_jenkins \
                         -Dsonar.projectName='jenkins' \
                         -Dsonar.projectVersion=1.0 \
