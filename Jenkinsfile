@@ -1,5 +1,10 @@
 pipeline {
     agent any
+        environment {
+        // Reference your SonarQube server configuration from Jenkins
+        SCANNER_HOME = tool 'sonarscanner' // Name of your SonarScanner tool in Jenkins
+        SONAR_TOKEN = credentials('sonartoken') // Name of your SonarQube token credential
+    }
     tools{
         maven 'maven363'
     }
@@ -10,14 +15,45 @@ pipeline {
                 git branch: 'main', url: 'https://github.com/aturn1/Project1.git'
             }
         }
-        stage('build'){
-            agent {
-                label 'slave1'
-            }
+        stage('compile'){
             steps {
-                sh 'mvn pakage'
+                sh 'mvn compile'
             }
         }
+        
+        stage('tests'){
+            steps {
+                sh 'mvn test'
+            }
+        }
+stage('SonarQube Analysis') {
+            steps {
+                withSonarQubeEnv('sonarcloud') { // Name of your SonarQube server configuration in Jenkins
+                    sh """
+                        ${SCANNER_HOME}/bin/sonar-scanner \
+                        -Dsonar.projectKey=sonar2025june_jenkins \
+                        -Dsonar.projectName='jenkins' \
+                        -Dsonar.projectVersion=1.0 \
+                        -Dsonar.sources=. \
+                        -Dsonar.host.url=https://sonarcloud.io \
+                        -Dsonar.login=${SONAR_TOKEN}
+                    """
+                }
+            }
+        }
+        
+        stage('Quality Gate Check') {
+            steps {
+                timeout(time: 1, unit: 'HOURS') {
+                    waitForQualityGate abortPipeline: true
+                }
+            }
+        }
+
+
+
+        
+        
         stage("deploy"){
             steps {
                 mail bcc: '', body: '''Hello Suresh, 
